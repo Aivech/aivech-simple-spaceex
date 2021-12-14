@@ -480,7 +480,149 @@ if not use_aai then
     {"steel-plate", 50},
     {"advanced-circuit", 100},
     {"iron-gear-wheel", 100}
-  } 
+  }
+  
+  --spidertron
+  local spidertron = data.raw.recipe["spidertron"]
+  spidertron.normal = nil
+  spidertron.expensive = nil
+  spidertron.energy_required = 10
+  spidertron.result = "spidertron"
+  spidertron.enabled = false
+  spidertron.ingredients =
+  {
+    {"effectivity-module-3", 2},
+    {"exoskeleton-equipment", 4},
+    {"fusion-reactor-equipment", 2},
+    {"low-density-structure", 150},
+    {"radar", 2},
+    {"raw-fish", 1},
+    {"rocket-control-unit", 16},
+    {"rocket-launcher", 4}
+  }
+  
+  --heavy armor
+  local heavy_armor = data.raw.recipe["heavy-armor"]
+  heavy_armor.normal = nil
+  heavy_armor.expensive = nil
+  heavy_armor.energy_required = 8
+  heavy_armor.result = "heavy-armor"
+  heavy_armor.enabled = false
+  heavy_armor.ingredients =
+  {
+    {"copper-plate", 100},
+    {"steel-plate", 50}
+  }
+  
+  --modular armor
+  local modular_armor = data.raw.recipe["modular-armor"]
+  modular_armor.normal = nil
+  modular_armor.expensive = nil
+  modular_armor.energy_required = 15
+  modular_armor.result = "modular-armor"
+  modular_armor.enabled = false
+  modular_armor.ingredients =
+  {
+    {"advanced-circuit", 30},
+    {"steel-plate", 50}
+  }
+  
+  --power armor
+  local power_armor = data.raw.recipe["power-armor"]
+  power_armor.normal = nil
+  power_armor.expensive = nil
+  power_armor.energy_required = 20
+  power_armor.result = "power-armor"
+  power_armor.enabled = false
+  power_armor.ingredients =
+  {
+    {"electric-engine-unit", 20},
+    {"processing-unit", 40},
+    {"steel-plate", 40}
+  }
+  
+  --power armor mk2
+  local power_armor_mk2 = data.raw.recipe["power-armor-mk2"]
+  power_armor_mk2.normal = nil
+  power_armor_mk2.expensive = nil
+  power_armor_mk2.energy_required = 25
+  power_armor_mk2.result = "power-armor-mk2"
+  power_armor_mk2.enabled = false
+  power_armor_mk2.ingredients =
+  {
+    {"effectivity-module-2", 25},
+    {"electric-engine-unit", 40},
+    {"low-density-structure", 30},
+    {"processing-unit", 60},
+    {"speed-module-2", 25}
+  }
+  
+  --portable fusion reactor
+  --local fusion_reactor_equipment = data.raw.recipe["fusion-reactor-equipment"]
+  --fusion_reactor_equipment.normal = nil
+  --fusion_reactor_equipment.expensive = nil
+  --fusion_reactor_equipment.energy_required = 10
+  --fusion_reactor_equipment.result = "fusion-reactor-equipment"
+  --fusion_reactor_equipment.enabled = false
+  --fusion_reactor_equipment.ingredients =
+  --{
+  --  {"low-density-structure", 50},
+  --  {"processing-unit", 200}
+  --}
+  
+  --energy shield
+  --local energy_shield_equipment = data.raw.recipe["energy-shield-equipment"]
+  --energy_shield_equipment.normal = nil
+  --energy_shield_equipment.expensive = nil
+  --energy_shield_equipment.energy_required = 10
+  --energy_shield_equipment.result = "energy-shield-equipment"
+  --energy_shield_equipment.enabled = false
+  --energy_shield_equipment.ingredients =
+  --{
+  --  {"advanced-circuit", 5},
+  --  {"steel-plate", 10}
+  --}
+  
+  --energy shield mk2
+  --local energy_shield_mk2_equipment = data.raw.recipe["energy-shield-mk2-equipment"]
+  --energy_shield_mk2_equipment.normal = nil
+  --energy_shield_mk2_equipment.expensive = nil
+  --energy_shield_mk2_equipment.energy_required = 10
+  --energy_shield_mk2_equipment.result = "energy-shield-mk2-equipment"
+  --energy_shield_mk2_equipment.enabled = false
+  --energy_shield_mk2_equipment.ingredients =
+  --{
+  --  {"energy-shield-equipment", 10},
+  --  {"low-density-structure", 5},
+  --  {"processing-unit", 5}
+  }
+  
+  --rocket control unit
+  --local rocket_control_unit = data.raw.recipe["rocket-control-unit"]
+  --rocket_control_unit.normal = nil
+  --rocket_control_unit.expensive = nil
+  --rocket_control_unit.energy_required = 30
+  --rocket_control_unit.result = "rocket-control-unit"
+  --rocket_control_unit.enabled = false
+  --rocket_control_unit.ingredients =
+  --{
+  --  {"processing-unit", 1},
+  --  {"speed-module", 1}
+  --}
+  
+  --low density structure
+  --local low_density_structure = data.raw.recipe["low-density-structure"]
+  --low_density_structure.normal = nil
+  --low_density_structure.expensive = nil
+  --low_density_structure.energy_required = 20
+  --low_density_structure.result = "low-density-structure"
+  --low_density_structure.enabled = false
+  --low_density_structure.ingredients =
+  --{
+  --  {"copper-plate", 20},
+  --  {"plastic-bar", 5},
+  --  {"steel-plate", 2}
+  --}
 
   data:extend({
     circuit, stone_circuit,
@@ -512,6 +654,11 @@ if not use_aai then
     radar,
     solar,
     armorlaser,
-    centrifuge
+    centrifuge,
+    spidertron,
+    heavy_armor,
+    modular_armor,
+    power_armor,
+    power_armor_mk2
   })
 end
